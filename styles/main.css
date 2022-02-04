@@ -75,13 +75,14 @@ CSS HEX
   padding: 0 5px;
 }
 
+
 .progress-filled-container {
   width: 90%;
-  height: 2px;
   cursor: pointer;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  height: 15px;
 }
 
 .progress-filled {
@@ -89,6 +90,11 @@ CSS HEX
   height: 3px;
   border-radius: 5px;
   background-image: linear-gradient(45deg, rgba(50, 0, 0, 1) 0%, rgba(9, 9, 50, 1) 50%, rgba(50, 0, 50, 1) 100%);
+  transition: all 0.1s ease-out;
+}
+
+.progress-filled-container:hover .progress-filled {
+  height: 8px;
 }
 
 .playback-time {
@@ -128,7 +134,7 @@ CSS HEX
   border: none;
   font-size: 20px;
   cursor: pointer;
-  color: rgb(49, 8, 49);
+  color: #310831;
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 1) 0%, rgba(2, 2, 2, 1) 50%, rgba(0, 0, 0, 1) 100%);
   border-radius: 5px;
 }

@@ -17,25 +17,33 @@ function mutebutton() {
 	if (volumerange.value == 0) {
 		volumerange.value = 60;
 		video.volume = 0.6;
+		mutebtn.style.color = "#310831";
 	} else {
 		volumerange.value = 0;
 		video.volume = 0;
+		mutebtn.style.color = "red";
 	}
 }
 function toggleFullscreen() {
 	if (!document.fullscreenElement) {
 		playercont.requestFullscreen().catch();
+		fullscreen.innerHTML = '<i class="fas fa-compress"></i>';
+		fullscreen.style.color = "red";
 	} else {
 		document.exitFullscreen();
+		fullscreen.innerHTML = '<i class="fas fa-expand"></i>';
+		fullscreen.style.color = "#310831";
 	}
 }
 function videoPlayToggle() {
 	if (video.paused) {
 		video.play();
-		playBtn.textContent = "played";
+		playBtn.innerHTML = `<i class="fas fa-play"></i>`;
+		playBtn.style.color = "#310831";
 	} else {
 		video.pause();
-		playBtn.textContent = "paused";
+		playBtn.innerHTML = `<i class="fas fa-pause"></i>`;
+		playBtn.style.color = "red";
 	}
 }
 function skip() {
@@ -54,7 +62,7 @@ function handleProgress() {
 	}
 }
 function scrub(e) {
-	const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+	const scrubTime = (e.offsetX / progress.clientWidth) * video.duration;
 	video.currentTime = scrubTime;
 
 	console.log(progressBar);
