@@ -1,0 +1,146 @@
+@import url(all.css);
+@import url(fontawesome.min.css);
+/* 
+CSS HEX 
+#0b090aff
+#161a1dff
+#660708ff
+#a4161aff
+#ba181bff
+#e5383bff
+#b1a7a6ff
+#d3d3d3ff
+#f5f3f4ff
+#ffffffff
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #161a1dff;
+}
+
+.player {
+  width: 100%;
+  min-height: 70vh;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.videos-container {
+  width: 70%;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+
+}
+
+.videos {
+  width: 100%;
+}
+
+.player-controler {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: rgb(3, 3, 3);
+
+}
+
+.progress {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+}
+
+.progress-filled-container {
+  width: 90%;
+  height: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.progress-filled {
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background-image: linear-gradient(45deg, rgba(50, 0, 0, 1) 0%, rgba(9, 9, 50, 1) 50%, rgba(50, 0, 50, 1) 100%);
+}
+
+.playback-time {
+  width: 8%;
+  margin-left: auto;
+  border: 2px solid black;
+  text-align: center;
+
+}
+
+.playback-time-p {
+  background-image: radial-gradient(circle, rgba(0, 41, 59, 1) 0%, rgba(0, 0, 0, 1) 100%, rgba(0, 41, 59, 1) 100%);
+  color: rgb(0, 77, 77);
+}
+
+.playback-passed-time {}
+
+.playback-duration {}
+
+.all-other-options {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.range {}
+
+#sound-control {}
+
+#playbackRate {}
+
+.btns {
+  width: 60px;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(49, 8, 49);
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 1) 0%, rgba(2, 2, 2, 1) 50%, rgba(0, 0, 0, 1) 100%);
+  border-radius: 5px;
+}
+
+.play-btn {
+  margin-left: auto;
+}
+
+.mute-btn {}
+
+.fullscreen-btn {}
+
+.skipB-btn {}
+
+.skipF-btn {}
